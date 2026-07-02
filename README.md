@@ -76,7 +76,6 @@ Logistic Regression Hyperparameters:
 
 GridSearchCV Parameters:
 
- - GridSearchCV;
  - 3‑fold CV;
  - scoring: macro F1;
  - n_jobs = -1;

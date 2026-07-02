@@ -63,14 +63,20 @@ Two pipelines were evaluated:
  - CountVectorizer + LogisticRegression;
  - TfidfVectorizer + LogisticRegression.
    
-Hyperparameters tuned:
+Hyperparameters tuned.
+
+Vectorizer Hyperparameters:
 
  - max_features: 20k, 50k;
  - ngram_range: (1,1), (1,2);
- - C: 0.5, 1.0, 2.0/
 
-GridSearchCV:
+Logistic Regression Hyperparameters:
 
+ - C: 0.5, 1.0, 2.0;
+
+GridSearchCV Parameters:
+
+ - GridSearchCV;
  - 3‑fold CV;
  - scoring: macro F1;
  - n_jobs = -1;
@@ -86,6 +92,29 @@ Best TF‑IDF result:
 **CV macro F1: 0.6465**
 
 CountVectorizer performed slightly better.
+
+#### What Could Be Tuned in a Production Pipeline?
+
+If this project were extended into a production‑level system, additional hyperparameters could be explored:
+
+Vectorizer Options:
+ - min_df — ignore extremely rare words (noise reduction);
+ - max_df — ignore overly frequent words (stop‑word‑like behavior);
+ - stop_words — custom stop‑word lists;
+ - sublinear_tf=True — logarithmic term frequency scaling;
+ - tokenizer / preprocessor — custom tokenization logic;
+
+Model Options:
+ - class_weight="balanced" — improve recall for rare classes;
+ - penalty="l1" or "l2" — different regularization types;
+ - solver="liblinear" or "saga" — optimized solvers for sparse data;
+ - max_iter — increase if convergence issues appear.
+
+Pipeline Enhancements:
+ - char‑level n‑grams — robustness to typos and short texts;
+ - feature engineering — text length, number of digits, presence of named entities;
+ - semantic embeddings — Word2Vec, FastText, or transformer embeddings;
+ - oversampling / augmentation — improve rare class performance.
 
 ## 7. Final Evaluation (Test Set).
 

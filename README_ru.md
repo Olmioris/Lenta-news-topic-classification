@@ -159,3 +159,8 @@ python src/train.py
 # оценка на отложенной тестовой выборке
 python src/evaluate.py
 ```
+
+## Отчёт об экспериментах.
+
+Подробные результаты оценки модели и анализа ошибок доступны в  
+[Issue #1 — Model Evaluation and Error Analysis](https://github.com/Olmioris/Lenta-news-topic-classification/issues/1)

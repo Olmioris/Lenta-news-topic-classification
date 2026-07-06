@@ -158,3 +158,8 @@ python src/train.py
 ### evaluate on the held-out test set
 python src/evaluate.py
 ```
+
+## Experiment Report.
+
+Detailed model evaluation and error analysis are available in
+[Issue #1 — Model Evaluation and Error Analysis](https://github.com/Olmioris/Lenta-news-topic-classification/issues/1)

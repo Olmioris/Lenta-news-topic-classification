@@ -1,1 +1,16 @@
+Dummy accuracy: 0.3849
+Dummy macro F1: 0.0617
 
+Best CountVectorizer CV macro F1: 0.6507
+Best TF-IDF CV macro F1: 0.6466
+
+Test accuracy: 0.8583
+Test macro F1: 0.6607
+
+
+
+{
+    "clf__C": 0.5,
+    "vect__max_features": 50000,
+    "vect__ngram_range": [1, 1]
+}
